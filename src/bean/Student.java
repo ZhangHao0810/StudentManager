@@ -8,11 +8,12 @@ import java.util.Date;
  * @Description： 学生类
  * <p>
  * 一会儿会用DBUTIl来进行数据库的操作,这里的属性名字一定要和数据库的字段名字一致.不然不行.
+ *  使用DBUtil 一定要有一个无参的构造.他需要找这个无参构造.内部要用反射机制.newInstance
  */
 public class Student {
 
     private int sid;
-    private String sname;
+    private String name;
     private String gender;
     private String phone;
     private String hobby;
@@ -22,6 +23,27 @@ public class Student {
      */
     private Date birthday;
 
+    public Student() {
+    }
+
+    public Student(int sid,String sname, String gender, String phone, String hobby, String info, Date birthday) {
+        this.sid = sid;
+        this.name = sname;
+        this.gender = gender;
+        this.phone = phone;
+        this.hobby = hobby;
+        this.info = info;
+        this.birthday = birthday;
+    }
+    public Student(String sname, String gender, String phone, String hobby, String info, Date birthday) {
+        this.name = sname;
+        this.gender = gender;
+        this.phone = phone;
+        this.hobby = hobby;
+        this.info = info;
+        this.birthday = birthday;
+    }
+
     public int getSid() {
         return sid;
     }
@@ -30,12 +52,12 @@ public class Student {
         this.sid = sid;
     }
 
-    public String getSname() {
-        return sname;
+    public String getName() {
+        return name;
     }
 
-    public void setSname(String sname) {
-        this.sname = sname;
+    public void setName(String sname) {
+        this.name = sname;
     }
 
     public String getGender() {
@@ -82,7 +104,7 @@ public class Student {
     public String toString() {
         return "Student{" +
                 "sid=" + sid +
-                ", sname='" + sname + '\'' +
+                ", sname='" + name + '\'' +
                 ", gender='" + gender + '\'' +
                 ", phone='" + phone + '\'' +
                 ", hobby='" + hobby + '\'' +

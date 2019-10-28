@@ -12,5 +12,6 @@
   </head>
   <body>
   <h3><a href="StudentListServlet"> 学生列表显示</a></h3>
+  <h3><a href="StudentListPageServlet?currentPage=1"> 分页显示</a></h3>
   </body>
 </html>
