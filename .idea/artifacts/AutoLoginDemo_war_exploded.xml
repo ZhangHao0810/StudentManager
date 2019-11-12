@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="AutoLoginDemo:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/AutoLoginDemo_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="AutoLoginDemo/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="AutoLoginDemo" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
